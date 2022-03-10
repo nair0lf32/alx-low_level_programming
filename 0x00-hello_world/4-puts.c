@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - basically prints some text...shut up betty! ffs!
+*main - basically prints some text...shut up betty! ffs!
 */
 int main(void)
 {
