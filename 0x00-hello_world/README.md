@@ -1,3 +1,3 @@
 # Hello World
 
-hello world!
+an introduction to c programming
