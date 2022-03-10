@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
 *main -  writes to stderr
 *Return: 1
