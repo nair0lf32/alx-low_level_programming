@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main -  print comibnation of three-digit numbers
+*main -  print comibnation of two two-digit numbers
 *Return: 0
 */
 int main(void)
