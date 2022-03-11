@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
-*main -  writes to stderr
-*Return: 1
+*main -  checks if the random n number is positive or negative
+*Return: 0
 */
 int main(void)
 {
