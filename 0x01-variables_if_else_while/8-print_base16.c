@@ -7,9 +7,18 @@
 int main(void)
 {
 int i;
-for (i = '0'; i <= 'f'; i++)
+for (i = '0'; i <= '9'; i++)
 {
 putchar(i);
+if(i == '9')
+{
+i = 'a';
+for (; i <= 'f'; i++)
+{
+putchar(i);
+}
+break;
+}
 }
 putchar('\n');
 return (0);
