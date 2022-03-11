@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
 *main -  print comibnation of two-digit numbers
 *Return: 0
@@ -13,12 +12,12 @@ for (j = i + 1; j < 10; j++)
 {
 putchar(i % 10 + '0');
 putchar(j % 10 + '0');
-putchar(',');
-putchar(' ');
 if (i == '8' && j == '9')
 {
 continue;
 }
+putchar(',');
+putchar(' ');
 }
 }
 putchar('\n');
