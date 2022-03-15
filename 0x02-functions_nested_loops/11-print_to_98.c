@@ -10,7 +10,7 @@ if (n < 98)
 {
 while (n <= 98)
 {
-_putchar(n);
+printf("%d", n);
 if (n != 98)
 {
 _putchar(',');
@@ -22,7 +22,7 @@ else if (n > 98)
 {
 while (n >= 98)
 {
-_putchar(n);
+printf("%d", n);
 if (n != 98)
 {
 _putchar(',');
@@ -32,7 +32,7 @@ n--;
 }
 else
 {
-_putchar(98);
+printf("%d", 98);
 }
 _putchar('\n');
 }
