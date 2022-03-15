@@ -18,6 +18,6 @@ if (k % 2 == 0 && k < 4000000)
 sum += k;
 }
 }
-printf("%lu", sum);
+printf("%lu\n", sum);
 return (0);
 }
