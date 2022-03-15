@@ -5,11 +5,12 @@
 */
 int main(void)
 {
-char text_to_print[8] = "_putchar";
+char text_to_print[10] = "_putchar";
 int i;
-for (i = 0; text_to_print[i] != '\0'; i++)
+for (i = 0; i<8; i++)
 {
-putchar(text_to_print[i]);
+_putchar(text_to_print[i]);
 }
+_putchar(10);
 return (0);
 }
