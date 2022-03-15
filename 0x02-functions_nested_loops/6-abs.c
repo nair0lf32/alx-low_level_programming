@@ -14,5 +14,4 @@ else
 {
 return(-n);
 }
-return (0);
 }
