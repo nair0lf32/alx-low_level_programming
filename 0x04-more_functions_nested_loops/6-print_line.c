@@ -6,17 +6,9 @@
 */
 void print_line(int n)
 {
-int lenght;
-if (n < 0)
-{
-for (lenght = 0; lenght <= n; lenght++)
+while (n-- > 0)
 {
 _putchar('_');
 }
 _putchar('\n');
-}
-else
-{
-_putchar('\n');
-}
 }
