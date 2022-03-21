@@ -3,14 +3,13 @@
 #include <time.h>
 /**
 * main - generates a random password and print it
-*
 * Return: 0
 */
 int main(void)
 {
 char c;
 int i;
-srand(time(0));
+srand(time(NULL));
 while (i <= 2645)
 {
 c = rand() % 128;
