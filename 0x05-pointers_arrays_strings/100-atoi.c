@@ -24,6 +24,6 @@ else if (j == 1)
 break;
 }
 }
-result = sign * result;
+result = sign *result;
 return (result);
 }
