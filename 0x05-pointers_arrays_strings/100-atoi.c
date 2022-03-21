@@ -6,25 +6,24 @@
 */
 int _atoi(char *s)
 {
-int i = 1;
-unsigned int num = 0;
-do {
-if (*s == '-')
+int i, j = 0;
+int result = 0;
+int sign = -1;
+for (i = 0; s[i] != '\0'; i++)
 {
-i *= -1;
-}
-else if (*s >= '0' && *s <= '9')
+if (s[i] == '-')
+sign = sign * -1;
+if (s[i] >= '0' && s[i] <= '9')
 {
-num = num * 10 + (*s - '0');
+result *= 10;
+result -= (s[i] - '0');
+j = 1;
 }
-else if (num > 0)
+else if (j == 1)
 {
 break;
-} 
-else
-{
-return (0);
 }
-} while (*s++);
-return (num *i);
+}
+result = sign * result;
+return (result);
 }
