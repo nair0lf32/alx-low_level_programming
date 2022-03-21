@@ -31,14 +31,14 @@ i++;
 return (i);
 }
 /**
-*swap_int -  swap the value of two integers
-*@a: a pointer to an integer
-*@b: a pointer to another integer
+*swap_char -  swap the value of two characters
+*@a: a pointer to a character
+*@b: a pointer to another character
 *Return: nothing
 */
-void swap_int(int *a, int *b)
+void swap_char(char *a, char *b)
 {
-int temp;
+char temp;
 temp = *a;
 *a = *b;
 *b = temp;
