@@ -9,10 +9,7 @@ char *leet(char *str)
 int i, j;
 char *leet[] = {
 "aAeEoOtTlL",
-"4433007711",
-"@43071",
-"szZ",
-"1337"
+"4433007711"
 };
 for (i = 0; str[i] != '\0'; i++)
 {
