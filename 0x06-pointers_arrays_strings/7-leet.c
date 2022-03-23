@@ -12,7 +12,8 @@ while (str[++i])
 {
 for (j = 0; j <= 7; j++)
 {
-if ( ( str[i] == characters[j] ) || ( str[i] - 32 == characters[j] ) )
+if ( str[i] == characters[j] ||
+str[i] - 32 == characters[j]) 
 {
 str[i] = j + '0';
 }
