@@ -22,5 +22,5 @@ str[i + 1] = str[i + 1] - 32;
 }
 }
 }
-return (_strcat);
+return (str);
 }
