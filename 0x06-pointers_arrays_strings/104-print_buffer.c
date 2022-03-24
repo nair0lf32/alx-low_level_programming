@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 *print_buffer - does what it says
 *@b: the buffer in question
