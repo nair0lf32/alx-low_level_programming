@@ -3,26 +3,25 @@
 *_strspn - gets the length of a prefix substring
 *@s: pointer to number of bytes in substring
 *@accept: pointer to the bytes that are part of the substring
-*Return: s, the length of the prefix substring
+*Return: the length of the prefix substring
 */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i, j, k;
-for (i = 0; s[i] != '\0'; i++)
+unsigned int c = 0;
+char *p = accept;
+while (*s++)
 {
-for (j = 0; accept[j] != '\0'; j++)
+while (*accept++)
+if (*(s - 1) == *(accept - 1))
 {
-if (s[i] == accept[j])
+c++;
+break;
+}
+if (!(*--accept))
 {
-for (k = i; s[k] == accept[j]; k++)
-{
-if (s[k] == '\0')
-{
-return (k - i);
+break;
 }
+accept = p;
 }
-}
-}
-}
-return (0);
+return (c);
 }
