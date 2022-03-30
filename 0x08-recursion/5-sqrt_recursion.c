@@ -6,7 +6,6 @@
 */
 int _sqrt_recursion(int n)
 {
-int i;
 if (n < 0)
 {
 return (-1);
@@ -15,12 +14,9 @@ if (n == 0)
 {
 return (0);
 }
-for (i = 1; i * i <= n; i++)
+if (n == 1)
 {
-if (i * i == n)
-{
-return (i);
+return (1);
 }
-}
-return (_sqrt_recursion(n - i));
+return (_sqrt_recursion(n - 1) + 1);
 }
