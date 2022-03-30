@@ -6,17 +6,27 @@
 */
 int _sqrt_recursion(int n)
 {
-if (n < 0)
+if (n == 0 || n == 1)
+{
+return (n);
+}
+return (_sqrt(0, n));
+}
+/**
+* _sqrt - returns the square root of a number
+* @x: the number
+* @y: the square root
+* Return: the square root of x
+*/
+int _sqrt(int x, int y)
+{
+if (x > y / 2)
 {
 return (-1);
 }
-if (n == 0)
+else if (x * x == y)
 {
-return (0);
+return (x);
 }
-if (n == 1)
-{
-return (1);
-}
-return (_sqrt_recursion(n - 1) + 1);
+return (_sqrt(x + 1, y));
 }
