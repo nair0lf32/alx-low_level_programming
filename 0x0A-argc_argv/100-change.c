@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 /**
-*main - prints the minimum number of change 
-*to make change for an amount of money
+*main - prints the minimum change for some money
 *@argc: number of arguments
 *@argv: array of arguments
 *Return: 0 if success, 1 if error
