@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
-*File:main.h
-*Desc:header file with function prototypes
+*File: main.h
+*Desc: header file with function prototypes
 */
 int _putchar(char c);
 int _islower(int c);
