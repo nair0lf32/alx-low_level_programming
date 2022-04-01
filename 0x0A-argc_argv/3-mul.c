@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 *main - multiplies two numbers
 *@argc: number of arguments
 *@argv: array of arguments
 *Return: 0 if success, 1 if error
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-if (argc < 3)
+if (argc != 3)
 {
 printf("Error\n");
 return (1);
