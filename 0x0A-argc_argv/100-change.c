@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 /**
-*main - prints the minimum number of coins 
+*main - prints the minimum number of change 
 *to make change for an amount of money
 *@argc: number of arguments
 *@argv: array of arguments
@@ -18,34 +18,30 @@ printf("Error\n");
 return (1);
 }
 money = atoi(argv[1]);
-if (money < 0)
+while (money > 0)
 {
-printf("%d\n", 0);
-return (0);
+change++;
+if ((money - 25) >= 0)
+{
+money -= 25;
+continue;
 }
-if (money % 25 >= 0)
+if ((money - 10) >= 0)
 {
-change += money / 25;
-money = money % 25;
+money -= 10;
+continue;
 }
-if (money % 10 >= 0)
+if ((money - 5) >= 0)
 {
-change += money / 10;
-money = money % 10;
+money -= 5;
+continue;
 }
-if (money % 5 >= 0)
+if ((money - 2) >= 0)
 {
-change += money / 5;
-money = money % 5;
+money -= 2;
+continue;
 }
-if (money % 2 >= 0)
-{
-change += money / 2;
-money = money % 2;
-}
-if (money % 1 >= 0)
-{
-change += money / 1;
+money--;
 }
 printf("%d\n", change);
 return (0);
