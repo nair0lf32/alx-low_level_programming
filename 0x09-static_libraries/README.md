@@ -1,3 +1,4 @@
-# Recursion
+# Static libraries
 
-A function that call itself ? That's looping with extra-steps
+one way C packages things
+
