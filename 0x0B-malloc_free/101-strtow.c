@@ -8,7 +8,7 @@
 char **strtow(char *str)
 {
 char **word_array;
-int i, j = 0, k = 0, size = 0, words = num_words(str);
+int i, j = 0, k = 0, size = 0, words = count(str);
 if (words == 0)
 return (NULL);
 word_array = (char **) malloc(sizeof(char *) * (words + 1));
@@ -48,11 +48,11 @@ else
 return (NULL);
 }
 /**
-* num_words - counts the number of words in str
+* count - counts the number of words in str
 *@str: string to be used
 *Return: number of words
 */
-int num_words(char *str)
+int count(char *str)
 {
 int i = 0, words = 0;
 
