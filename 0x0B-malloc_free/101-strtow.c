@@ -7,68 +7,82 @@
 */
 char **strtow(char *str)
 {
-int i = 0, j = 0, k = 0;
-int len = 0, count = 0;
-char **words, *column;
-if (!str || !*str)
-{
+char **words;
+int i, j = 0, k = 0, len = 0, word_count = count(str);
+
+if (word_count == 0)
 return (NULL);
+words = (char **) malloc(sizeof(char *) * (word_count + 1));
+if (words != NULL)
+{
+for (i = 0; i <= _strlen(str) && word_count; i++)
+{
+if ((str[i] != ' ') && (str[i] != '\0'))
+len++;
+else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+{
+words[j] = (char *) malloc(sizeof(char) * len + 1);
+if (words[j] != NULL)
+{
+while (k < len)
+{
+words[j][k] = str[(i - len) +k];
+k++;
 }
-while (*(str + i))
-{
-if (*(str + i) != ' ')
-{
-if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
-{
-count += 1;
+words[j][k] = '\0';
+len = k = 0;
+j++;
 }
-}
-i++;
-}
-if (count == 0)
+else
 {
-return (NULL);
-}
-count += 1;
-words = malloc(sizeof(char *) * count);
-if (!words)
-{
-return (NULL);
-}
-i = 0;
-while (*str)
-{
-while (*str == ' ' && *str)
-{
-str++;
-}
-len = 0;
-while (*(str + len) != ' ' && *(str + len))
-{
-len += 1;
-}
-len += 1;
-column = malloc(sizeof(char) * len);
-if (!column)
-{
-for (k = j - 1; k >= 0; k--)
-{
-free(words[k]);
-}
+while (j-- >= 0)
+free(words[j]);
 free(words);
 return (NULL);
 }
-for (k = 0; k < (len - 1);  k++)
-{
-*(column + k) = *(str++);
-}
-*(column + k) = '\0';
-*(words + j) = column;
-if (j < (count - 1))
-{
-j++;
 }
 }
-*(words + j) = NULL;
+words[word_count] = NULL;
 return (words);
+}
+else
+return (NULL);
+}
+/**
+*count - counts the number of words in str
+*@str: string to be counted
+*Return: number of word_count
+*/
+int count(char *str)
+{
+int i = 0, word_count = 0;
+while (i <= -strlen(str))
+{
+if ((str[i] != ' ') && (str[i] != '\0'))
+{
+i++;
+}
+else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+{
+word_count += 1;
+i++;
+}
+else
+{
+i++;
+}
+}
+return (word_count);
+}
+/**
+*_strlen - returns length of str
+*@s: string to be measured
+*Return: length of str
+*/
+int _strlen(char *s)
+{
+int i = 0;
+while (s[i] != '\0')
+i++;
+return (i);
 }
