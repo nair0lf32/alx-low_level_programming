@@ -7,56 +7,56 @@
 */
 char **strtow(char *str)
 {
-char **words;
-int i, j = 0, k = 0, len = 0, word_count = count(str);
-
-if (word_count == 0)
+char **word_array;
+int i, j = 0, k = 0, size = 0, words = num_words(str);
+if (words == 0)
 return (NULL);
-words = (char **) malloc(sizeof(char *) * (word_count + 1));
-if (words != NULL)
+word_array = (char **) malloc(sizeof(char *) * (words + 1));
+if (word_array != NULL)
 {
-for (i = 0; i <= _strlen(str) && word_count; i++)
+for (i = 0; i <= _strlen(str) && words; i++)
 {
 if ((str[i] != ' ') && (str[i] != '\0'))
-len++;
+size++;
 else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 {
-words[j] = (char *) malloc(sizeof(char) * len + 1);
-if (words[j] != NULL)
+word_array[j] = (char *) malloc(sizeof(char) * size + 1);
+if (word_array[j] != NULL)
 {
-while (k < len)
+while (k < size)
 {
-words[j][k] = str[(i - len) +k];
+word_array[j][k] = str[(i - size) +k];
 k++;
 }
-words[j][k] = '\0';
-len = k = 0;
+word_array[j][k] = '\0';
+size = k = 0;
 j++;
 }
 else
 {
 while (j-- >= 0)
-free(words[j]);
-free(words);
+free(word_array[j]);
+free(word_array);
 return (NULL);
 }
 }
 }
-words[word_count] = NULL;
-return (words);
+word_array[words] = NULL;
+return (word_array);
 }
 else
 return (NULL);
 }
 /**
-*count - counts the number of words in str
-*@str: string to be counted
-*Return: number of word_count
+* num_words - counts the number of words in str
+*@str: string to be used
+*Return: number of words
 */
-int count(char *str)
+int num_words(char *str)
 {
-int i = 0, word_count = 0;
-while (i <= -_strlen(str))
+int i = 0, words = 0;
+
+while (i <= _strlen(str))
 {
 if ((str[i] != ' ') && (str[i] != '\0'))
 {
@@ -64,7 +64,7 @@ i++;
 }
 else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 {
-word_count += 1;
+words += 1;
 i++;
 }
 else
@@ -72,17 +72,18 @@ else
 i++;
 }
 }
-return (word_count);
+return (words);
 }
 /**
-*_strlen - returns length of str
+*_strlen - returns the length of a string
 *@s: string to be measured
-*Return: length of str
+*Return: length of the string
 */
 int _strlen(char *s)
 {
-int i = 0;
-while (s[i] != '\0')
-i++;
+int i;
+for (i = 0; s[i] != '\0'; i++)
+{
+}
 return (i);
 }
