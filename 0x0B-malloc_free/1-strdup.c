@@ -17,7 +17,7 @@ dup = malloc(sizeof(char) * _strlen(str) + 1);
 if (dup == NULL)
 {
 return (NULL);
-}    
+}
 for (i = 0; str[i] != '\0'; i++)
 {
 dup[i] = str[i];
@@ -28,7 +28,7 @@ return (dup);
 /**
 *_strlen - returns the length of a string
 *@s: string to check
-return: length of the string
+*Return: length of the string
 */
 int _strlen(char *s)
 {
