@@ -25,3 +25,16 @@ dup[i] = str[i];
 dup[i] = '\0';
 return (dup);
 }
+/**
+*_strlen - returns the length of a string
+*@s: string to check
+*/
+int _strlen(char *s)
+{
+int i;
+for (i = 0; s[i] != '\0'; i++)
+{
+}
+return (i);
+}
+
