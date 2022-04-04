@@ -56,7 +56,7 @@ return (NULL);
 int count(char *str)
 {
 int i = 0, word_count = 0;
-while (i <= -strlen(str))
+while (i <= -_strlen(str))
 {
 if ((str[i] != ' ') && (str[i] != '\0'))
 {
