@@ -15,6 +15,7 @@ exit(98);
 }
 print_number(_atoi(argv[1]) * _atoi(argv[2]));
 _putchar('\n');
+return (0);
 }
 /**
 *_puts -  prints a string
