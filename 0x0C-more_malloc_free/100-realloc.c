@@ -16,8 +16,8 @@ if (ptr != NULL)
 copy = ptr;
 }
 else
-{ 
-return (malloc(new_size)); 
+{
+return (malloc(new_size));
 }
 if (new_size == old_size)
 {
@@ -26,7 +26,7 @@ return (ptr);
 if (new_size == 0 && ptr != NULL)
 {
 free(ptr);
-return (0); 
+return (0);
 }
 new_ptr = malloc(new_size);
 if (new_ptr == NULL)
