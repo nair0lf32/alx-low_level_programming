@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
 * main - multiplies two positive numbers
 * @argc: number of arguments
 * @argv: array of arguments
-* Return: the multiplication result
+* Return: 0 if success
 */
 int main(int argc, char *argv[])
 {
