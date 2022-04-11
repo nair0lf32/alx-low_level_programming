@@ -10,45 +10,62 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int i = 0, j = 0, k;
-dog_t *doge;
-while (name[i] != '\0')
+dog_t *doggo;
+if (name == NULL || age < 0 || owner == NULL)
+{
+return (NULL);
+}
+doggo = malloc(sizeof(dog_t));
+if (doggo == NULL)
+{
+return (NULL);
+}
+doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+if (doggo->name == NULL)
+{
+free(doggo);
+return (NULL);
+}
+doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (doggo->owner == NULL)
+{
+free(doggo->name);
+free(doggo);
+return (NULL);
+}
+doggo->name = _strcopy(doggo->name, name);
+doggo->age = age;
+doggo->owner = _strcopy(doggo->owner, owner);
+return (doggo);
+}
+/**
+*_strlen - returns the length of a string
+*@s: string to be measured
+*Return: length of string
+*/
+int _strlen(char *s)
+{
+int i = 0;
+while (s[i] != '\0')
 {
 i++;
 }
-while (owner[j] != '\0')
-{
-j++;
+return (i);
 }
-doge = malloc(sizeof(dog_t));
-if (doge == NULL)
+/**
+*_strcopy - copies a string
+*@dest: destination string
+*@src: source string
+*Return: pointer to destination string
+*/
+char *_strcopy(char *dest, char *src)
 {
-free(doge);
-return (NULL);
-}
-doge->name = malloc(i *sizeof(doge->name));
-if (doge->name == NULL)
+int i = 0;
+while (src[i] != '\0')
 {
-free(doge->name);
-free(doge);
-return (NULL);
+dest[i] = src[i];
+i++;
 }
-for (k = 0; k <= i; k++)
-{
-doge->name[k] = name[k];
-}
-doge->age = age;
-doge->owner = malloc(j *sizeof(doge->owner));
-if (doge->owner == NULL)
-{
-free(doge->owner);
-free(doge->name);
-free(doge);
-return (NULL);
-}
-for (k = 0; k <= j; k++)
-{
-doge->owner[k] = owner[k];
-}
-return (doge);
+dest[i] = '\0';
+return (dest);
 }
