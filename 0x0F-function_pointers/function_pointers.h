@@ -4,10 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- *File:function_pointers.h
- *Desc:header file with function prototypes
- */
 char _putchar(char c);
 void print_name(char *name, void (*f)(char *));
 void array_iterator(int *array, size_t size, void (*action)(int));
