@@ -15,7 +15,7 @@ printf("Error\n");
 exit(98);
 }
 op_func = get_op_func(argv[2]);
-if (op_func == NULL)
+if (op_func == NULL || argv[2] != op_func)
 {
 printf("Error\n");
 exit(99);
