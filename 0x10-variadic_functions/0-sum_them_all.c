@@ -2,7 +2,7 @@
 /**
 *sum_them_all - sums all the arguments
 *@n: number of arguments
-*Return: nothing
+*Return: the sum
 */
 int sum_them_all(const unsigned int n, ...)
 {
