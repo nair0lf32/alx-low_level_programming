@@ -10,9 +10,13 @@ unsigned int len = 0;
 while (h)
 {
 if (!h->str)
-	printf("[0] (nil)\n");
+{
+printf("[0x0] (nil)\n");
+}
 else
-	printf("[%d] %s\n", h->len, h->str);
+{
+printf("[0x%p] (%s)\n", h, h->str);
+}
 h = h->next;
 len++;
 }
