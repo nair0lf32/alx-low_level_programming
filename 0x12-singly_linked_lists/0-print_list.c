@@ -11,9 +11,13 @@ size_t s = 0;
 while (l != NULL)
 {
 if (l->str != NULL)
-lrintf("[%d] %s\n", l->len, l->str);
+{
+printf("[%d] %s\n", l->len, l->str);
+}
 else
-lrintf("[0] (nil)\n");
+{
+printf("[0] (nil)\n");
+}
 s += 1;
 l = l->next;
 }
