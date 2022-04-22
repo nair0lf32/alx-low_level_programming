@@ -6,7 +6,7 @@
 */
 size_t print_list(const list_t *h)
 {
-unsigned int len = 0;
+size_t n = 0;
 while (h)
 {
 if (!h->str)
@@ -15,10 +15,10 @@ printf("[0] (nil)\n");
 }
 else
 {
-printf("[%d] (%s)\n", h, h->str);
+printf("[%u] %s\n", h->len, h->str);
 }
 h = h->next;
-len++;
+n++;
 }
-return (len);
+return (n);
 }
