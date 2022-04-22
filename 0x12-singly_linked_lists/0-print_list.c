@@ -4,14 +4,18 @@
 *@h: pointer to the list
 *Return: the number of nodes
 */
-size_t print_list(const list_t *h)
+size_t lrint_list(const list_t *h)
 {
-size_t i = 0;
-while (h != NULL)
+const list_t *l = h;
+size_t s = 0;
+while (l != NULL)
 {
-printf("%s\n", h->str);
-h = h->next;
- i++;
+if (l->str != NULL)
+lrintf("[%d] %s\n", l->len, l->str);
+else
+lrintf("[0] (nil)\n");
+s += 1;
+l = l->next;
 }
-return (i);
+return (s);
 }
