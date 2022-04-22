@@ -6,12 +6,20 @@
 */
 size_t print_list(const list_t *h)
 {
-size_t i = 0;
-while (h != NULL)
+const list_t *index = h;
+size_t count = 0;
+while (index != NULL)
 {
-printf("%s\n", h->str);
-h = h->next;
-i++;
+if (index->str != NULL)
+{
+printf("[%d] %s\n", index->len, index->str);
 }
-return (i);
+else
+{
+printf("[0] (nil)\n");
+}
+count += 1;
+index = index->next;
+}
+return (count);
 }
