@@ -11,11 +11,11 @@ while (h)
 {
 if (!h->str)
 {
-printf("[0x0] (nil)\n");
+printf("[0] (nil)\n");
 }
 else
 {
-printf("[0x%p] (%s)\n", h, h->str);
+printf("[%d] (%s)\n", h, h->str);
 }
 h = h->next;
 len++;
