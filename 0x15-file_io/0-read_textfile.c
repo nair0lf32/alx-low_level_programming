@@ -20,13 +20,13 @@ return (0);
 }
 opn = open(filename, O_RDONLY);
 rd = read(o, buffer, letters);
-wr = write(STDOUT_FILENO, buffer, r);
-if (o == -1 || r == -1 || w == -1 || w != r)
+wr = write(STDOUT_FILENO, buffer, rd);
+if (opn == -1 || rd == -1 || wr == -1 || wr != r)
 {
 free(buffer);
 return (0);
 }
 free(buffer);
-close(o);
-return (w);
+close(opn);
+return (wr);
 }
