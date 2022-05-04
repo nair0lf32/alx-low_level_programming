@@ -19,7 +19,7 @@ if (buffer ==  NULL)
 return (0);
 }
 opn = open(filename, O_RDONLY);
-rd = read(o, buffer, letters);
+rd = read(opn, buffer, letters);
 wr = write(STDOUT_FILENO, buffer, rd);
 if (opn == -1 || rd == -1 || wr == -1 || wr != r)
 {
