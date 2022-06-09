@@ -1,8 +1,10 @@
 #include "lists.h"
 /**
-sum_dlistint - sums all the data in a dlistint_t list
-*@head: pointer to the head of the list
-*Return: the sum of all the data in the list or 0 if empty
+*insert_dnodeint_at_index - inserts a new node at a given position
+*@h: pointer to the head of the list
+*@idx: index to insert the new node
+*@n: data to store in the new node
+*Return: address of the new node or NULL if failed
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
