@@ -21,17 +21,15 @@ free(temp);
 return (1);
 }
 temp = *head;
-for (i = 0; i < index - 1; i++)
+while (i < index)
 {
+temp = temp->next;
+i++;
 if (!temp->next)
 {
 return (-1);
 }
 temp = temp->next;
-}
-if (!temp->next)
-{
-return (-1);
 }
 temp->next = temp->next->next;
 free(temp->next);
