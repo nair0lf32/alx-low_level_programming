@@ -15,12 +15,12 @@ free(ht);
 return (NULL);
 }
 ht->size = size;
-ht->array = malloc(sizeof(hash_node_t *) * ht->size);
+ht->array = malloc(sizeof(hash_node_t *) * size);
 if (ht->array == NULL)
 {
 return (NULL);
 }
-for (i = 0; i < ht->size; i++)
+for (i = 0; i < size; i++)
 {
 ht->array[i] = NULL;
 }
