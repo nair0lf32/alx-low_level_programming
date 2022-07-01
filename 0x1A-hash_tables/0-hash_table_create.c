@@ -7,10 +7,11 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 hash_table_t *ht;
-unsigned long int i;
+unsigned long int i = 0;
 ht = malloc(sizeof(hash_table_t));
-if (ht == NULL)
+if (ht == NULL || size <= 0)
 {
+free(ht);
 return (NULL);
 }
 ht->size = size;
