@@ -3,7 +3,7 @@
 
 
 def island_perimeter(grid):
-    """calculates the perimeter of an island described by 
+    """calculates the perimeter of an island described by
     grid parameter (a list of list of integers).
     0 = a water zone
     1 = land zone
