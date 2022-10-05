@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
-* binary_search - searches for a value in a sorted array of integers 
+* binary_search - searches for a value in a sorted array of integers
 * using Binary Search
 * @array: array of integers
 * @size: size of the array
@@ -31,7 +31,8 @@ if (array[i] > value)
 {
 right = i - 1;
 }
-else {
+else
+{
 left = i + 1;
 }
 }
